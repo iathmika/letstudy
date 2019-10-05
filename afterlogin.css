@@ -18,8 +18,8 @@ body
 	background-size: cover;
 	margin-left:40px; 
 	margin-right:40px;
-	background-image: url("https://secureservercdn.net/ip-ad.mwp2.iad2.secureserver.net/gj7.819.godaddywp.com/wp-content/uploads/2016/06/Bible-Study-Group-Background-1140x760.jpg"); 
-}
+	/*background-image: url("https://secureservercdn.net/ip-ad.mwp2.iad2.secureserver.net/gj7.819.godaddywp.com/wp-content/uploads/2016/06/Bible-Study-Group-Background-1140x760.jpg"); 
+*/}
 .container{
 	display:flex;
 	justify-content: center;
@@ -34,11 +34,11 @@ body
 	width: 350px;
 	max-width:500px%;
 	margin: auto;
-	background-color: black;
-	opacity: 0.5;
+	background-color: white;
 	text-align:center;
-	border-radius: 10px;
+	border-radius: 6px;
 	padding: 40px;
+	border-bottom: 4px solid #4479F5;
 
 }
 
@@ -46,6 +46,7 @@ body
 {
 	transform: scale(1.1);
 	box-shadow: 15px;
+	z-index: 1;
 }
 
 .card1 .myicons
@@ -56,25 +57,29 @@ body
 {
 	border:none;
 	padding:8px;
-	display:inline-block;
+	display:block;
 	color:white;
-	background-color: white;
-	color: black;
+	background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
 	cursor:pointer;
 	width:60%;
 	border-radius:10px;
 	font-size:18px;
 	text-align:center;
-	margin-bottom: 20px;
-	opacity: 1;
+	margin: 50% auto 50% auto;
+	transition: 0.5s;
 }
+
+.button1:hover {
+	background-position: right;
+}
+
 a{
 	text-decoration: none;
 	font-size:22px;
 	color:black;
 
 }
-a:hover,button:hover
+a:hover
 {
 	opacity:0.6;
 }
@@ -127,56 +132,8 @@ p
 	border: 10px;
 	display: inline;
 }
-ul.top
-{
-	display: inline;
-	text-decoration: none;
-	font-family: cursive;
-	font-style: bold;
-	text-align:right;
-}
-ul.mid
-{
-	text-align: left; 
-	display: inline;
-	text-decoration: none;
-}
-li.top
-{
-	display: inline;
-	text-decoration: none;
-	text-align: right;
-	margin: 10px;
-}
-li.mid
-{
-	display:inline;	
-	text-decoration: none;
-	text-align: left;
-	text-indent: none;
-}
-a.mid:link, a.mid:visited
-{
-	display: inline;
-	/*background-color: #ffffff;*/
-	font-size: 25px;
-	font-style: bold;
-	color: #ffffff;
-	text-decoration: none;
-	padding: 10px 15px;
-	font-family: comic sans ms;
-	text-align: left;
-	float: left;
-	margin: 2px;
 
-}
-a.mid:hover, a.mid:active
-{
-	color:  #b5525c;
-	text-align: left;
-	text-decoration: none;
-	display: inline;
-}
+
 a.formLink:link, a.formLink:visited
 {
 	display: inline;
