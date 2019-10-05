@@ -1,0 +1,199 @@
+
+#Search
+{
+	height : 40px;
+	width : 100px;
+	font-family: Verdana;
+	font-size: 20px;
+}
+.imag
+{
+	border-radius: 5px;
+}
+body
+{
+	font-family: verdana;
+	font-size: 15px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-left:40px; 
+	margin-right:40px;
+	background-image: url("https://secureservercdn.net/ip-ad.mwp2.iad2.secureserver.net/gj7.819.godaddywp.com/wp-content/uploads/2016/06/Bible-Study-Group-Background-1140x760.jpg"); 
+}
+.container{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 35px 0;
+
+}
+.card1
+{
+	box-shadow: 15px 15px 15px 15px rgba(0,0,0,0.2);
+	height: 400px;
+	width: 350px;
+	max-width:500px%;
+	margin: auto;
+	background-color: black;
+	opacity: 0.5;
+	text-align:center;
+	border-radius: 10px;
+	padding: 40px;
+
+}
+
+.card1:hover
+{
+	transform: scale(1.1);
+	box-shadow: 15px;
+}
+
+.card1 .myicons
+{
+	padding: 20px;
+}
+.button1
+{
+	border:none;
+	padding:8px;
+	display:inline-block;
+	color:white;
+	background-color: white;
+	color: black;
+	cursor:pointer;
+	width:60%;
+	border-radius:10px;
+	font-size:18px;
+	text-align:center;
+	margin-bottom: 20px;
+	opacity: 1;
+}
+a{
+	text-decoration: none;
+	font-size:22px;
+	color:black;
+
+}
+a:hover,button:hover
+{
+	opacity:0.6;
+}
+.buttons
+{
+	color: #2e86c1 ;
+}
+a.top:link, a.top:visited
+{
+	/*background-color: #ffffff;*/
+	display: inline;
+	font-size: 20px;
+	font-style: bold;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration:none;
+	padding: 10px 15px;
+	border-radius: 30px;
+	display: inline;
+	float: right;
+	margin: 10px;
+}
+a.top:hover, a.top:active
+{
+	color:  #b5525c;
+	display: inline;
+}
+.heading
+{
+	font-family: verdana;
+	color: #0E1241;
+	display: inline;
+	font-size: 45px;
+}
+div.bodydiv
+{
+	font-family: verdana;
+	font-size: 40px;
+	margin: 20px;
+	display: inline;
+	text-shadow: #0E1241;
+	color: #491D58; 
+	text-align: left;
+}
+p
+{
+	font-family: verdana;
+	font-size: 20px;
+	margin: 20px;
+	border: 10px;
+	display: inline;
+}
+ul.top
+{
+	display: inline;
+	text-decoration: none;
+	font-family: cursive;
+	font-style: bold;
+	text-align:right;
+}
+ul.mid
+{
+	text-align: left; 
+	display: inline;
+	text-decoration: none;
+}
+li.top
+{
+	display: inline;
+	text-decoration: none;
+	text-align: right;
+	margin: 10px;
+}
+li.mid
+{
+	display:inline;	
+	text-decoration: none;
+	text-align: left;
+	text-indent: none;
+}
+a.mid:link, a.mid:visited
+{
+	display: inline;
+	/*background-color: #ffffff;*/
+	font-size: 25px;
+	font-style: bold;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px 15px;
+	font-family: comic sans ms;
+	text-align: left;
+	float: left;
+	margin: 2px;
+
+}
+a.mid:hover, a.mid:active
+{
+	color:  #b5525c;
+	text-align: left;
+	text-decoration: none;
+	display: inline;
+}
+a.formLink:link, a.formLink:visited
+{
+	display: inline;
+	background-color: #0E1241;
+	font-size: 20px;
+	font-style: bold;
+	color: white;
+	text-decoration: none;
+	padding: 15px 25px;
+	border-radius: 45px;
+	display: inline;
+
+}
+
+a.formLink:hover, a.formLink:active
+{
+	background-color: #ffffff;
+	color:  #0E1241;
+	display: inline;
+}
