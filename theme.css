@@ -20,63 +20,64 @@ body
 	margin-right:40px;
 	background-image: url("https://secureservercdn.net/ip-ad.mwp2.iad2.secureserver.net/gj7.819.godaddywp.com/wp-content/uploads/2016/06/Bible-Study-Group-Background-1140x760.jpg"); 
 }
-.container{
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	margin: 35px 0;
-
-}
-.card1
+div.polaroid 
 {
-	box-shadow: 15px 15px 15px 15px rgba(0,0,0,0.2);
-	height: 400px;
-	width: 350px;
-	max-width:500px%;
-	margin: auto;
-	background-color: black;
-	opacity: 0.5;
-	text-align:center;
-	border-radius: 10px;
-	padding: 40px;
-
-}
-
-.card1:hover
-{
-	transform: scale(1.1);
-	box-shadow: 15px;
-}
-
-.card1 .myicons
-{
-	padding: 20px;
-}
-.button1
-{
-	border:none;
-	padding:8px;
-	display:inline-block;
-	color:white;
+	width: 500px;
+	height: auto;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #BFBFBF;
 	background-color: white;
-	color: black;
-	cursor:pointer;
-	width:60%;
-	border-radius:10px;
-	font-size:18px;
-	text-align:center;
-	margin-bottom: 20px;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	text-align: center;	
+	
+	
+}
+div.contactbox 
+{
+	width: 500px;
+	height: auto;
+	border: 1px solid #BFBFBF;
+	background-color: white;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;	
+	border-radius:	15px;
+	padding: 5px 5px 5px 5px;
 	opacity: 1;
 }
-a{
-	text-decoration: none;
-	font-size:22px;
-	color:black;
-
-}
-a:hover,button:hover
+div.container1
 {
-	opacity:0.6;
+	position: relative;
+	text-align: center;
+	color: white;
+	opacity: 1;
+}
+div.imagetext
+{
+	color: #000000;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family:	comic sans ms;
+}
+input[type=submit]
+{
+	text-decoration: none;
+	background-color: #d2d0fe;
+	height: 25px;
+	width: 50px;
+	padding: 1px 1px;
+	border-radius: 20px;
+	border: none;
+}
+input[type=text], input[type=phone], input[type=email], input[type=password]
+{
+	height: 15px;	
+	padding: 10px;
+	font-size:	15px;
+	font-family: Consolas;
 }
 .buttons
 {
