@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
 <title>Login Page</title>
@@ -6,9 +8,9 @@
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="signup.php" method="post">
 			<h1>Create Account</h1>
-			<input type="text" placeholder="Name" />
+			 <input size=50 type="text" name="Name" placeholder="Name" required >
 			<select name="Branch">
 				<option value="" disabled selected style="font-family: 'Montserrat', sans-serif;">Select your branch</option>
   				<option value="Computer">Computer</option>
@@ -16,21 +18,22 @@
   				<option value="EXTC">EXTC</option>
 			    <option value="ETRX">ETRX</option>
 			</select>
-			<input type="password" placeholder="Password" />
-			<input type="Contact" placeholder="Contact" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			 <input size=50 type="text" name="Username" placeholder="Username" required>
+			 <input size=50 type="Password" name="Password" placeholder="Password" required>
+			 <input size=50 type="tel" name="Contact" placeholder="Contact" required>
+			 <input size=50 type="Email" name="Email" placeholder="Email" required>
+			
 
-			<button>Sign Up</button>
+			<input class="ghost" type="submit" name="submit" value="Sign up"> </input>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="login.php" method="post">
 			<h1>Sign in</h1>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input size=50 name="Username" type="text" placeholder="Username" />
+			<input name="Password" type="Password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
+			<input class="ghost" type="submit" name="submit" value="sign in"> </input>
 		</form>
 	</div>
 	<div class="overlay-container">
