@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Free Library System">
+    <meta name="keywords" content="Library System, Book System">
+    <meta name="author" content="Codeblogger">
+    <title>Library System</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <!-- Pages -->
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/book_list.css">
+    <link rel="stylesheet" href="/CSS/insertion_section.css">
+    <script src="/JS/main.js"></script>
+</head>
+<body style="background-color: #fbe555;">
+
+    <section id="one-page">
+        <div class="container">
+            <!-- Title -->
+            <div class="row">
+                <h1 style="color: black">Library</h1>
+            </div>
+
+            <div class="row mt-4">
+                <!-- insertion section -->
+                <div class="col-lg-5" id="insertion_section">
+                    <form class="form-group justify-content-center">
+                        <div class="row" id="name-section">
+                            <label for="bookName">Book Name</label>
+                            <input type="text" class="form-control" id="bookName">
+                        </div>
+                        <div class="row" id="name-section">
+                            <label for="bookName">Subject Name</label>
+                            <input type="text" class="form-control" id="bookName">
+                        </div>
+                        <div class="row" id="two-section">
+                            <div class="col-6">
+                                <label for="numberPage">Number of books</label>
+                                <input type="number" class="form-control" id="numberPage">
+                            </div>
+                            <div class="col-6">
+                                <label for="serialNumber">Serial Number</label>
+                                <input type="number" class="form-control" id="serialNumber">
+                            </div>
+                        </div>
+                        <div class="add-button mt-4">
+                            <button type="button" class="btn btn-danger btn-block" id="add" >ADD</button>
+                        </div>
+                      </from>
+                </div>
+
+                <!-- Book List -->
+                <div class="col-lg-7" id="book_list">
+                    <table class="table table-borderless table-striped mt-3 ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Serial</th>
+                                <th scope="col">Subject</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabs">
+                            <tr class="tab">
+                                <td>1</td>
+                                <th scope="row"><a href="https://drive.google.com/drive/u/1/folders/0B0_xtTDKrmuFUWRrNnFDT0c0dWs">Operating Systems</a></th>
+                                </td>
+                            </tr>
+                            <tr class="tab">
+                                <td>2</td>
+                                <th scope="row"><a href="https://drive.google.com/drive/u/1/folders/0B0_xtTDKrmuFLWVTa1dPWXg3TG8">ADBMS</a></th>
+                                </td>
+                            </tr>
+                            <tr class="tab">
+                                <td>3</td>
+                                <th scope="row"><a href="https://drive.google.com/drive/u/1/folders/0B0_xtTDKrmuFenhTXzE5TG5DZW8">Data Networks</a></th>
+                                  
+                                </td>
+                            </tr>
+                            <tr class="tab">
+                                <td>4</td>
+                                <th scope="row"><a href="https://drive.google.com/drive/u/1/folders/0B0_xtTDKrmuFZWVlV3ZRdl9TM0U">Software Engineering</a></th>
+                                  
+                                </td>
+                            </tr>
+                            <tr class="tab">
+                                <td>5</td>
+                                <th scope="row"><a href="https://drive.google.com/drive/u/1/folders/0B0_xtTDKrmuFZjF4aUJxNU1GbXM">TCS</a></th>
+                                  
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
