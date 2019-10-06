@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>After Login</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="/chat_linking.js"></script>
+
+    </head>
+<style>
+body {
+    padding: 0;
+    margin-left: 40px;
+	margin-right: 40px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.container {
+    width: 900px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2,275px);
+}
+.box {
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer
+}
+#box_1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+#box_2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+#box_3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3
+}
+.profile_photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px auto;
+    margin-bottom: -5px
+	background-position: center;
+    background-size: cover;
+}
+.job {
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: verdana;
+    font-size: 20px;
+}
+.p1 {
+    background-image: url("p1.jpg");
+}
+.p2 {
+    background-image: url("p1.jpg");
+}
+.p3 {
+    background-image: url("p1.jpg");
+}
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: rotateX(-180deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    text-align: center;
+    font-family: comic sans ms;
+    width: 300px;
+    height: 275px;
+    transition: .5s;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.front {
+    width: 300px;
+    height: 275px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 35px;
+    transform: rotate(0);
+    transition: .5s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    background: #fff;
+}
+.box.active > .back {
+    transform: rotateX(0deg) ;
+    top:0;
+    left: 0;
+    z-index: 99;
+}
+.box.active > .front {
+    transform: rotateX(-180deg);
+}
+.front:hover {
+    z-index: 99;
+    border: none;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+.back h3{
+    margin-top: 20px;
+}
+.back p {
+    width: 250px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin: 10px auto 5px auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 900px) {
+    .container {
+        top:200px;
+        width: 600px;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3,275px);
+    }
+    #box_1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #box_2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    #box_3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        margin-top: 900px;
+        width: 300px;
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(6,275px);
+    }
+    #box_1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #box_2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #box_3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+}
+a.top:link, a.top:visited
+{
+	background-color: #ffffff;
+	display: inline;
+	font-size: 15px;
+	font-style: bold;
+	color: #0E1241;
+	text-decoration:none;
+	padding: 10px 15px;
+	border-radius: 30px;
+	display: inline;
+	float: right;
+	margin: 10px;
+}
+a.top:hover, a.top:active
+{
+	background-color: #0E1241;
+	color:  #ffffff;
+	display: inline;
+}
+ul.top
+{
+	display: inline;
+	text-decoration: none;
+	font-family: cursive;
+	font-style: bold;
+	text-align:right;
+}
+ul.mid
+{
+	text-align: left; 
+	display: inline;
+	text-decoration: none;
+}
+li.top
+{
+	display: inline;
+	text-decoration: none;
+	text-align: right;
+	margin: 10px;
+}
+li.mid
+{
+	display:inline;	
+	text-decoration: none;
+	text-align: left;
+	text-indent: none;
+}
+a.mid:link, a.mid:visited
+{
+	display: inline;
+	background-color: #ffffff;
+	font-size: 25px;
+	font-style: bold;
+	color: black;
+	text-decoration: none;
+	padding: 10px 15px;
+	font-family: comic sans ms;
+	text-align: left;
+	float: left;
+	margin: 2px;
+}
+a.mid:hover, a.mid:active
+{
+	background-color: #0E1241;
+	color:  #ffffff;
+	text-align: left;
+	text-decoration: none;
+	display: inline;
+}
+</style>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+<div class="container" style="align: center;">
+
+	<div class="box" id="box_1">
+		<div class="front" onclick="frontFunction()">
+			<div class="profile_photo p1"></div>
+			<h3 class="full_name">Create Room</h3>
+			
+		</div>
+		<div class="back" >
+		
+			<p class="info">
+               To create a new room, enter your room code here: 
+               <input type="text" class="ghost" value="Enter room name"> </input>
+               </p>
+                <h3> <button class="ghost" onclick="backFunction()"> Create New Room </button> </h3>
+			
+		</div>
+	</div>
+
+	<div class="box" id="box_2">
+		<div class="front" onclick="frontFunction()">
+			<div class="profile_photo p2"></div>
+			<h3 class="full_name">Join Room</h3>
+			
+		</div>
+		<div class="back" >
+			
+			<p class="info">
+                Enter the room code here
+                <input type="text" class="ghost" value="Your room code here"> </input>
+                    </p>
+              <a href="http://localhost:5000"> <button>  <h3>  Join an existing room!  </h3> </button> </a>
+
+		
+         
+		</div>
+	</div>
+
+	<div class="box" id="box_3">
+		<div class="front" onclick="frontFunction()">
+			<div class="profile_photo p3"></div>
+			<h3 class="full_name">Library</h3>
+			
+		</div>
+		<div class="back" onclick="backFunction()">
+		<h3>View our library</h3>
+			<p class="info">
+                Click here to view our online Library catalogue.
+               <a href="library.html"> <input type="submit" class="ghost" value="View Library"> </input> </a>
+
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+    let box = document.querySelectorAll(".box");
+	function frontFunction() {
+		box.forEach(x => x.addEventListener("click", function () {
+			this.classList.add("active"); }));
+	}
+	function backFunction() {
+		box.forEach(x => x.addEventListener("click", function () {
+		this.classList.remove("active"); }));
+	}
+</script>
+</body>
+</html>
