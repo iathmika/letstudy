@@ -19,29 +19,65 @@
 	<div class ="container">
 	<div class="row">
 		<div class="col col-lg-4">
-			<div class="card1">
-					<a href="#" style="font-size:100px;color:black;"><i class="fa fa-user myicons"></i></a>
-				<button class="button1">Create Room</button>
+			<div class="card1" onclick="frontFunction" id="c1">
+				<div class="front" onclick="frontFunction()">
+				
+					<button class="button1" ">Create Room</button>
 				</div>
-
+				<div class="back" onclick="backFunction()">
+					<input type="text" name="roomid" placeholder="Room ID">
+					<select name="room_type">
+						<option>Public</option>
+						<option>Private</option>
+					</select>
+				</div>
+					
 			</div>
+		</div>
 
-			<div class="col col-lg-4">
-			<div class="card1">
-					<a href="#" style="font-size:100px;color:black;"><i class="fa fa-user-secret myicons"></i></a>
-				<button class="button1" style="opacity: 1;">Join Room</button>
+		<div class="col col-lg-4" id="c2">
+			<div class="card1" id="c2">
+				<div class="front" onclick="frontFunction()">
+				
+					<button class="button1" style="opacity: 1;" onclick="backFunction()">Join Room</button>
+				</div>
+				<div class="back" onclick="backFunction()">
+					<select name="room_type">
+						<option>Public</option>
+						<option>Private</option>
+					</select>
+					<input type="text" name="roomid" placeholder="Room ID">
 				</div>
 			</div>
+		</div>
 
-			<div class="col col-lg-4">
-			<div class="card1">
+		<div class="col col-lg-4" id="c3">
+			<div class="card1" id="c3">
+				<div class="front" onclick="frontFunction()">
 					<a href="#" style="font-size:100px;color:black;"><i class="fa fa-id-card myicons"></i></a>
-				<button class="button1">Library</button>
-				</div>s
+					<button class="button1">Library</button>
+				</div>
+				<div class="back" onclick="backFunction()">
+					
+				</div>
+					
 			</div>
 		</div>
 	</div>
 	</div>
-	<br>
+	</div>
+	<script>
+    let box = document.querySelectorAll(".card1");
+	function frontFunction() {
+		console.log("front function");
+		box.forEach(x => x.addEventListener("click", function () {
+			this.classList.add("active"); }));
+	}
+	function backFunction() {
+		console.log("back function");
+		box.forEach(x => x.addEventListener("click", function () {
+		this.classList.remove("active"); }));
+	}
+</script>
 </body>
 </html>

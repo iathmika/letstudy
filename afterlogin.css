@@ -41,13 +41,13 @@ body
 	border-bottom: 4px solid #4479F5;
 
 }
-
+/*
 .card1:hover
 {
 	transform: scale(1.1);
 	box-shadow: 15px;
 	z-index: 1;
-}
+}*/
 
 .card1 .myicons
 {
