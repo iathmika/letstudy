@@ -1,0 +1,39 @@
+body{
+    background-image: url("https://wallpapersafari.com/hd-library-wallpaper/");
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    /*background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");*/
+}
+/* 
+Wallpaper
+Source: https://wallpapersafari.com/hd-library-wallpaper/ 
+*/
+#one-page{
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-size: auto;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto ;
+    
+}
+.container{
+    position: relative;
+    top: 15%;
+}
+h1{
+    font-size: 50px;
+    color: black;
+}
+
+@media (max-width: 976px){
+    #one-page{
+        height: 150%;
+        background-image: url("wallpaper.jpg");
+        background-size: auto;
+        -webkit-background-size: auto;
+        -moz-background-size: auto;
+        -o-background-size: auto ; 
+    }
+}
