@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css?family=Arvo|Caveat|Dancing+Script|Mansalva&display=swap" rel="stylesheet">
-<title>Dashboard</title>
+
+<title>After Login</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="/chat_linking.js"></script>
@@ -10,16 +10,12 @@
     </head>
 <style>
 body {
-    background-image: url("https://secureservercdn.net/ip-ad.mwp2.iad2.secureserver.net/gj7.819.godaddywp.com/wp-content/uploads/2016/06/Bible-Study-Group-Background-1140x760.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%; 
     padding: 0;
     margin-left: 40px;
 	margin-right: 40px;
     justify-content: center;
     align-items: center;
-    
-
+    background: #fff;
 }
 .container {
     width: 900px;
@@ -29,12 +25,9 @@ body {
     grid-template-rows: repeat(2,275px);
 }
 .box {
-    color: black;
     position: relative;
     perspective: 1000px;
     cursor: pointer
-    background-color: white;
-    opacity: 0.4;
 }
 #box_1 {
     grid-column: 1 / 2;
@@ -247,14 +240,8 @@ a.mid:hover, a.mid:active
 </style>
 </head>
 <body>
-    <div style="font-family: 'Caveat', cursive;color: #ffffff; font-size: 60px; text-shadow: 1px 1px 2px #000000;">
-        <img src="http://www.bradleysbookoutlet.com/wp-content/uploads/2013/06/bradleys-book-outlet-books-only-logo-300x198.png" alt="logo" border="0" height="70" width="65">
-        Letstudy
-    </div>
-    <br>
-    <div style="font-family: 'Caveat', cursive; color: #ffffff; font-size: 30px; color: white;"> Where studies meet fun</s></div>
-    <br>
 
+<br>
 <br>
 <br>
 <div class="container" style="align: center;">
@@ -265,18 +252,22 @@ a.mid:hover, a.mid:active
 			<h3 class="full_name">Create Room</h3>
 			
 		</div>
+
+
 		<div class="back" >
 		
+        <form action="aftercreate.php" method="post">
 			<p class="info">
                To create a new room, enter your room code here: 
-               <input type="text" class="ghost" value="Enter room name"> </input>
+               <input type="number" class="ghost" value="Enter room id"> </input>
                </p>
                 <h3> <button class="ghost" onclick="backFunction()"> Create New Room </button> </h3>
-			
+			</form>
 		</div>
 	</div>
 
 	<div class="box" id="box_2">
+
 		<div class="front" onclick="frontFunction()">
 			<div class="profile_photo p2"></div>
 			<h3 class="full_name">Join Room</h3>
@@ -285,11 +276,13 @@ a.mid:hover, a.mid:active
 		<div class="back" >
 			
 			<p class="info">
-                Enter the room code here
-                <input type="text" class="ghost" value="Your room code here"> </input>
-                    </p>
-              <a href="http://localhost:5000"> <button>  <h3>  Join an existing room!  </h3> </button> </a>
 
+                Enter the room code here
+                <input type="number" class="ghost" value="Your room code here"> </input>
+                    </p>
+                          <form action="afterjoin.php" method="post">
+             <button>  <h3>  Join an existing room!  </h3> </button> 
+</form>
 		
          
 		</div>
